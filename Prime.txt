@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int f, t, i, p;
+    cout << "Enter two numbers" << endl;
+    cin >> f >> t;
+    for (; f <= t; f++)
+    {
+        p = 1; i = 2;
+        if (f == 0 || f == 1)
+        {
+            p = 0;
+        }
+//See when f=2 there is no condition so officially p=1 thats why the last if condition fulfill
+        else if (f >= 3)
+        {
+            while (i < f)//here it start with 3 and we put here less then bcz if i==f then if condition will always utter like 5%5 thats why
+            {
+                if (f % i == 0)
+                {
+                    p = 0;
+                    break;//when this break utter the while loop breaks
+                }
+                else
+                {
+                    i++;
+                }
+            }
+        }
+        if (p == 1)
+        {
+            cout << f << " ";
+        }
+    }
+    system("pause>0");
+}
